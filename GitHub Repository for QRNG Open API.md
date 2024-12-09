@@ -23,7 +23,8 @@ Although the QRNG Open API was created for obtaining entropy from any QRNG platf
 **On-Prem Data Center Deployment**  
 A local data center deployment uses one or more QRNG sources that support the QRNG Open API and security devices, such as NGFWs, can make API calls to one or more QRNG sources to obtain high quality entropy for its cryptographic functions.  The QRNG components are secured using both network and TLS security
 
-![][image1]
+https://docs.google.com/document/d/e/2PACX-1vSOVBM7iA1PJMsqAO18LITyngYWVb_C2W3Mq8WmXOocJUBPlv-MBcfyeSShMuFKxgCiXzkRskRqP05t/pub
+
 
 1. VLANs are used to segment and secure the communications between the QRNG and requesting devices. Only authorized personnel are permitted to manage the devices on the secure VLAN and normal network traffic is segmented and never mixed.  
 2. The API and entropy communications are secured using standards-based protocols, such as TLS 1.3.  The TLS session can be secured with either classic encryption algorithms, post-quantum PQCs, or a combination of hybrid technologies \- such as X-Wing’s X25519 and Kyber-768.  
