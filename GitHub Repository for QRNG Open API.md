@@ -43,7 +43,7 @@ A cloud deployment uses one or more QRNG sources that support the QRNG Open API 
 **Single Server (VM hypervisor) Deployment**  
 A single server deployment uses one or more QRNG sources installed physically (or virtually) on the server to provide the QRNG Open API. Security services, such as virtual NGFWs, can make API calls to one or more QRNG sources to obtain high quality entropy for its cryptographic functions.  For QRNG devices without webserver service capabilities, these API calls may be implemented via device driver level functions that mimic the higher-level QRNG Open API features.
 
-![][image3]
+https://docs.google.com/document/d/e/2PACX-1vTgJOMnxOh6RbU_Iaz4cZfxhtos-eBxa0GyYYuffVasAbh5KaZR3YZzUjLb76Qw5r5vuugpaBfes87-/pub
 
 1. In virtualized environments, The API and entropy communications can optionally be secured using standards-based protocols, such as TLS 1.3.  The TLS session can be secured with either classic encryption algorithms, post-quantum PQCs, or a combination of hybrid technologies \- such as X-Wing’s X25519 and Kyber-768.  
 2. Authentication can be enforced using bidirectional certificates and optionally with vendor provided tokens.  
