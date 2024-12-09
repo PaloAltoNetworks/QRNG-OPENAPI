@@ -33,7 +33,7 @@ https://docs.google.com/document/d/e/2PACX-1vSOVBM7iA1PJMsqAO18LITyngYWVb_C2W3Mq
 **Cloud-hosted EaaS Deployment**  
 A cloud deployment uses one or more QRNG sources that support the QRNG Open API and virtual applications, such as Palo Alto Networks’ VM-Series firewall, can make API calls to one or more QRNG sources to obtain high quality entropy for its cryptographic functions.  The QRNG components are secured using network and TLS security as well as firewall policies:
 
-![][image2]
+(https://docs.google.com/document/d/e/2PACX-1vTD0RQXkUkV5v-oc8oju5wQ5X2_0QHaa4OLSH3MwSfpVoWsI570SZ2JZkTqX2N2lvol4Oil5JTT831U/pub)
 
 1. Virtual switch is used to segment and secure the communications between the QRNG and requesting devices. Only authorized personnel are permitted to manage the devices on the QRNG vSwitch network and normal data traffic is segmented and never mixed.  
 2. The API and entropy communications are secured using standards-based protocols, such as TLS 1.3.  The TLS session can be secured with either classic encryption algorithms, post-quantum PQCs, or a combination of hybrid technologies \- such as X-Wing’s X25519 and Kyber-768.  
