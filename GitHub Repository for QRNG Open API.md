@@ -45,6 +45,8 @@ A single server deployment uses one or more QRNG sources installed physically (o
 
 https://docs.google.com/document/d/e/2PACX-1vTgJOMnxOh6RbU_Iaz4cZfxhtos-eBxa0GyYYuffVasAbh5KaZR3YZzUjLb76Qw5r5vuugpaBfes87-/pub
 
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vTgJOMnxOh6RbU_Iaz4cZfxhtos-eBxa0GyYYuffVasAbh5KaZR3YZzUjLb76Qw5r5vuugpaBfes87-/pub?embedded=true"></iframe>
+
 1. In virtualized environments, The API and entropy communications can optionally be secured using standards-based protocols, such as TLS 1.3.  The TLS session can be secured with either classic encryption algorithms, post-quantum PQCs, or a combination of hybrid technologies \- such as X-Wing’s X25519 and Kyber-768.  
 2. Authentication can be enforced using bidirectional certificates and optionally with vendor provided tokens.  
 3. In non-virtualized environments, security services will make direct calls to the API server. Such calls should be properly authenticated, and a vendor provided token or an authenticated Public Key may be required or utilized in that scenario.
