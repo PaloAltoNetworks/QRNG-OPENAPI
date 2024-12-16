@@ -55,11 +55,14 @@ A single server deployment uses one or more QRNG sources installed physically (o
 **QRNG Open API Commands**
 
 **Capabilities GET**   
+```
 Query QRNG platform’s capabilities.
+```
 
 **Request:**  
+```
 https://some-host/v1/capabilities GET
-
+```
 **Entropy Response:**  
 ```
 “entropy”  
