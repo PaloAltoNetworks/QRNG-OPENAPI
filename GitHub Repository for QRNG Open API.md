@@ -61,6 +61,7 @@ Query QRNG platform’s capabilities.
 https://some-host/v1/capabilities GET
 
 **Entropy Response:**  
+```
 “entropy”  
  	“min\_block\_size: \<size\> 	\[Optional. Integer value. Min block size in bytes, default to 1\]  
  	"max\_block\_size": \<size\> 	\[Mandatory. Integer value. Max block size in bytes\]  
@@ -80,7 +81,7 @@ https://some-host/v1/capabilities GET
 **Error Codes:**  
   "422”					\[Error in requesting parameter\]  
   “503”					\[Entropy capability source unavailable\]
-
+```
 **Entropy POST**  
 Pull entropy from external QRNG platforms.
 
