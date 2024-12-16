@@ -24,6 +24,7 @@ Although the QRNG Open API was created for obtaining entropy from any QRNG platf
 A local data center deployment uses one or more QRNG sources that support the QRNG Open API and security devices, such as NGFWs, can make API calls to one or more QRNG sources to obtain high quality entropy for its cryptographic functions.  The QRNG components are secured using both network and TLS security.
 
 For example of the On-Prem Data Center Deployment, click the URL below. 
+![image](https://github.com/user-attachments/assets/792a8933-7cc2-4065-93ac-7aef9a78f5fb)
 
 https://docs.google.com/document/d/e/2PACX-1vSOVBM7iA1PJMsqAO18LITyngYWVb_C2W3Mq8WmXOocJUBPlv-MBcfyeSShMuFKxgCiXzkRskRqP05t/pub
 
