@@ -86,24 +86,27 @@ https://some-host/v1/capabilities GET
 Pull entropy from external QRNG platforms.
 
 **Request:**  
+```
 https://some-host/v1/entropy POST  
    ”block\_size": \<bytes\>         	\[Mandatory, integer\]  
    “block\_count”: \<count\>          	\[Optional, integer. Defaults to 1\. Value for amount of blocks\]  
    “entropy\_type”: \<type\>          	\[Optional, string. Defaults to 1st in array. Type to obtain entropy from\]
+```
 
 **Header:**   
 Content-Type: application/json
-
+```
 Authorization: Bearer \<token\>		\[Optional. Vendor provided authentication token\]
-
-**Response:**  
+```
+**Response:** 
+``` 
    "entropy": \[\<random\>,…\]         	\[Mandatory, base64 encoded byte string\]  
    “extensions”: \[\<object\>,...\]	\[Extensions, Optional\] {array of Json Object}
 
 **Error Codes:**  
   "422”				  	\[Error in requesting parameter\]  
   “503”					\[Entropy source unavailable\]
-
+```
 **Healthtest GET** (Optional)  
 Obtain health test information on entropy provided.
 
@@ -111,6 +114,7 @@ Obtain health test information on entropy provided.
 https://some-host/v1/healthtest GET
 
 **Response:**  
+```
    “test\_result”                  	\[Array of objects. Each string corresponds to vendor’s test response\]  
         “test\_type”                 	\[Mandatory. Test type performed. Eg. nist\_90b\]  
         “test\_result”              	\[Mandatory. Test result value. Eg. 0.94\]  
@@ -122,59 +126,61 @@ https://some-host/v1/healthtest GET
 **Error Codes:**  
   "422”				      	\[Error in requesting parameter\]  
   “503”					\[Health test source unavailable\]
-
+```
 **QRNG Open API Examples**
 
 **Examples using API tokens for authentication**  
 **Curl:**  
 **Capabilities GET**
-
+```
 $ curl \-X GET \-H "Authorization: Bearer \<API\_TOKEN\>" "\<URI\>/capabilities"
-
+```
 **Entropy POST**
-
+```
 $ curl \-X POST \-d '{"block\_size":\<BLOCK\_SIZE\>,"block\_count":\<BLOCK\_COUNT\>}' \-H "Content-Type: application/json" \-H "Authorization: Bearer \<API\_TOKEN\>" "\<URI\>/entropy"
-
+```
 **Health Test GET**
-
+```
 $ curl \-X GET \-H "Authorization: Bearer \<API\_TOKEN\>" "\<URI\>/healthtest"
-
+```
 **Python:**  
 import requests
-
+```
 headers \= {'Authorization': 'Bearer \<API\_TOKEN\>'}  
 data \= {'block\_size':\<BLOCK\_SIZE\>,'block\_count':\<BLOCK\_COUNT\>}
-
+```
 **\# Call 1:POST request to /entropy with JSON data**
-
+```
 response \= requests.post('\<URI\>/entropy', headers=headers, json=data)  
 print(response.json())
-
+```
 **\# Call 2: GET request to /capabilities**  
+```
 response2 \= request.get('\<URI\>/capabilities', headers=headers)  
 print(response2.json())
 
 **\# Call 3: GET request to /healthtest**  
 response3 \= request.get('\<URI\>/healthtest', headers=headers)  
 print(response3.json())
-
+```
 **Examples using mTLS for authentication**
 
 **Curl:**
 
 **Capabilities GET**
-
+```
 $ curl \-X GET "\<URI\>/capabilities" \--cert \<CLIENT\_CERT\> \--key \<CLIENT\_KEY\> \--cacert \<CA\_CERT\>
-
+```
 **Entropy POST**
-
+```
 $ curl \-X POST "\<URI\>/entropy" \-d  '{"block\_size": \<BLOCK SIZE\>, "block\_count": \<BLOCK COUNT\>}' \-H "Content-Type: application/json" \--cert \<CLIENT\_CERT\> \--key \<CLIENT\_KEY\>  \--cacert  \<CA\_CERT\>
-
+```
 **Health Test GET**
-
+```
 $ curl "\<URI\>/healthtest" \--cert \<CLIENT\_CERT\> \--key \<CLIENT\_KEY\> \--cacert \<CA\_CERT\>
-
+```
 **Python including calls Capabilities, Entropy and Health Test:**  
+```
 import requests  
 import json  
 import urllib3
@@ -215,7 +221,7 @@ print\_response(response2)
 print("\\nGET request to /healthtest\\n")  
 response3 \= get\_request("healthtest")  
 print\_response(response3)  
-  
+```  
 
 **Contributors**
 
