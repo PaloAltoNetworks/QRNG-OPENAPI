@@ -23,11 +23,8 @@ Although the QRNG Open API was created for obtaining entropy from any QRNG platf
 **On-Prem Data Center Deployment**  
 A local data center deployment uses one or more QRNG sources that support the QRNG Open API and security devices, such as NGFWs, can make API calls to one or more QRNG sources to obtain high quality entropy for its cryptographic functions.  The QRNG components are secured using both network and TLS security.
 
-For example of the On-Prem Data Center Deployment, click the URL below. 
+
 ![image](https://github.com/user-attachments/assets/792a8933-7cc2-4065-93ac-7aef9a78f5fb)
-
-https://docs.google.com/document/d/e/2PACX-1vSOVBM7iA1PJMsqAO18LITyngYWVb_C2W3Mq8WmXOocJUBPlv-MBcfyeSShMuFKxgCiXzkRskRqP05t/pub
-
 
 1. VLANs are used to segment and secure the communications between the QRNG and requesting devices. Only authorized personnel are permitted to manage the devices on the secure VLAN and normal network traffic is segmented and never mixed.  
 2. The API and entropy communications are secured using standards-based protocols, such as TLS 1.3.  The TLS session can be secured with either classic encryption algorithms, post-quantum PQCs, or a combination of hybrid technologies \- such as X-Wing’s X25519 and Kyber-768.  
@@ -36,9 +33,8 @@ https://docs.google.com/document/d/e/2PACX-1vSOVBM7iA1PJMsqAO18LITyngYWVb_C2W3Mq
 **Cloud-hosted EaaS Deployment**  
 A cloud deployment uses one or more QRNG sources that support the QRNG Open API and virtual applications, such as Palo Alto Networks’ VM-Series firewall, can make API calls to one or more QRNG sources to obtain high quality entropy for its cryptographic functions.  The QRNG components are secured using network and TLS security as well as firewall policies:
 
-For example of the Cloud-hosted EaaS Deployment, click the URL below. 
+![image](https://github.com/user-attachments/assets/d2f52dc3-5d75-4ac9-ac26-28afd0a03e0b)
 
-https://docs.google.com/document/d/e/2PACX-1vTD0RQXkUkV5v-oc8oju5wQ5X2_0QHaa4OLSH3MwSfpVoWsI570SZ2JZkTqX2N2lvol4Oil5JTT831U/pub
 
 1. Virtual switch is used to segment and secure the communications between the QRNG and requesting devices. Only authorized personnel are permitted to manage the devices on the QRNG vSwitch network and normal data traffic is segmented and never mixed.  
 2. The API and entropy communications are secured using standards-based protocols, such as TLS 1.3.  The TLS session can be secured with either classic encryption algorithms, post-quantum PQCs, or a combination of hybrid technologies \- such as X-Wing’s X25519 and Kyber-768.  
@@ -48,9 +44,8 @@ https://docs.google.com/document/d/e/2PACX-1vTD0RQXkUkV5v-oc8oju5wQ5X2_0QHaa4OLS
 **Single Server (VM hypervisor) Deployment**  
 A single server deployment uses one or more QRNG sources installed physically (or virtually) on the server to provide the QRNG Open API. Security services, such as virtual NGFWs, can make API calls to one or more QRNG sources to obtain high quality entropy for its cryptographic functions.  For QRNG devices without webserver service capabilities, these API calls may be implemented via device driver level functions that mimic the higher-level QRNG Open API features.
 
-For example of the Single Server Deployment, click the URL below. 
+![image](https://github.com/user-attachments/assets/385470b8-0ffc-4270-8e5d-dfffcae27022)
 
-https://docs.google.com/document/d/e/2PACX-1vTgJOMnxOh6RbU_Iaz4cZfxhtos-eBxa0GyYYuffVasAbh5KaZR3YZzUjLb76Qw5r5vuugpaBfes87-/pub
 
 1. In virtualized environments, The API and entropy communications can optionally be secured using standards-based protocols, such as TLS 1.3.  The TLS session can be secured with either classic encryption algorithms, post-quantum PQCs, or a combination of hybrid technologies \- such as X-Wing’s X25519 and Kyber-768.  
 2. Authentication can be enforced using bidirectional certificates and optionally with vendor provided tokens.  
