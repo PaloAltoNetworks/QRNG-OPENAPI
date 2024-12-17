@@ -1,4 +1,4 @@
-***GitHub Repository for QRNG Open API***
+**GitHub Repository for QRNG Open API**
 
 **Readme**  
 The QRNG Open API was created by Palo Alto Networks and six technical partners (Anametric, ID Quantique, Qrypt, Quantinuum, Quantropi, and Quside) to simplify the ability to obtain high quality entropy from an external QRNG platform (source).  The QRNG Open API provides a common mechanism to obtain information on the QRNG platform’s capabilities, retrieve entropy from the platform, and to check the health of the entropy provided.  
