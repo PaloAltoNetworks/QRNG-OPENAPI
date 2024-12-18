@@ -1,6 +1,7 @@
                                     **GitHub Repository for QRNG Open API**
+				    
 
-![image](https://github.com/user-attachments/assets/582962f7-42df-4d14-9519-b82cf97b1f40)
+![image](https://github.com/user-attachments/assets/f422882f-b526-4877-83a7-fa5a55910631)
 
 
 **Readme**  
